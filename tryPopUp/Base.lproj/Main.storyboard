@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tryPopUp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiQ-2W-5Wr">
+                                <rect key="frame" x="138.5" y="298" width="99" height="70"/>
+                                <state key="normal" title="Show Popover"/>
+                                <connections>
+                                    <action selector="onTapPopupButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gnz-c1-fzK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf4-oJ-Zp1">
+                                <rect key="frame" x="150" y="378" width="75" height="30"/>
+                                <state key="normal" title="Show Alert"/>
+                                <connections>
+                                    <action selector="onTapAlertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEO-n4-Ui9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3k2-On-Mbn">
+                                <rect key="frame" x="121" y="458" width="132" height="30"/>
+                                <state key="normal" title="Show Custom Alert"/>
+                                <connections>
+                                    <action selector="OnTapAlertCustomButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f7g-2k-06I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rf4-oJ-Zp1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KIv-Hd-ITd"/>
+                            <constraint firstItem="aiQ-2W-5Wr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Psl-1Y-irS"/>
+                            <constraint firstItem="aiQ-2W-5Wr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gjd-eC-tRS"/>
+                            <constraint firstItem="3k2-On-Mbn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gvD-Fj-kUI"/>
+                            <constraint firstItem="Rf4-oJ-Zp1" firstAttribute="top" secondItem="aiQ-2W-5Wr" secondAttribute="bottom" constant="10" id="hpx-fg-B66"/>
+                            <constraint firstItem="Rf4-oJ-Zp1" firstAttribute="top" secondItem="aiQ-2W-5Wr" secondAttribute="top" constant="80" id="oTB-ml-9f4"/>
+                            <constraint firstItem="3k2-On-Mbn" firstAttribute="top" secondItem="Rf4-oJ-Zp1" secondAttribute="top" constant="80" id="rcW-sa-ZoG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertButton" destination="oTB-ml-9f4" id="ZtD-Yc-ZZQ"/>
+                        <outlet property="customAlertButton" destination="3k2-On-Mbn" id="Und-Gf-ObY"/>
+                        <outlet property="popupButton" destination="aiQ-2W-5Wr" id="wPo-EU-yj4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
